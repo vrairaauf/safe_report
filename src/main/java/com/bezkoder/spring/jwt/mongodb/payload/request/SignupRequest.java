@@ -19,8 +19,56 @@ public class SignupRequest {
     @NotBlank
     @Size(min = 6, max = 40)
     private String password;
-  
-    public String getUsername() {
+    private String phone;
+    private String cin;
+    private String region;
+    private String postalcode;
+    private String address;
+    public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getCin() {
+		return cin;
+	}
+
+	public void setCin(String cin) {
+		this.cin = cin;
+	}
+
+	public String getRegion() {
+		return region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+	public String getPostalcode() {
+		return postalcode;
+	}
+
+	public void setPostalcode(String postalcode) {
+		this.postalcode = postalcode;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setRoles(Set<String> roles) {
+		this.roles = roles;
+	}
+
+	public String getUsername() {
         return username;
     }
  

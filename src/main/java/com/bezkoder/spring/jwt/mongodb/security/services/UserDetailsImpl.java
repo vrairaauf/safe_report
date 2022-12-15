@@ -9,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.bezkoder.spring.jwt.mongodb.models.Image;
 import com.bezkoder.spring.jwt.mongodb.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -25,6 +26,47 @@ public class UserDetailsImpl implements UserDetails {
 	private String password;
 
 	private Collection<? extends GrantedAuthority> authorities;
+
+	private boolean is_verify_account;
+	private boolean complete_all_infos;
+	private boolean has_profile_image;
+	private Image image;
+	
+	public boolean isIs_verify_account() {
+		return is_verify_account;
+	}
+
+	public void setIs_verify_account(boolean is_verify_account) {
+		this.is_verify_account = is_verify_account;
+	}
+
+	public boolean isComplete_all_infos() {
+		return complete_all_infos;
+	}
+
+	public void setComplete_all_infos(boolean complete_all_infos) {
+		this.complete_all_infos = complete_all_infos;
+	}
+
+	public boolean isHas_profile_image() {
+		return has_profile_image;
+	}
+
+	public void setHas_profile_image(boolean has_profile_image) {
+		this.has_profile_image = has_profile_image;
+	}
+
+	public Image getImage() {
+		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public UserDetailsImpl(String id, String username, String email, String password,
 			Collection<? extends GrantedAuthority> authorities) {
