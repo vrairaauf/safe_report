@@ -1,5 +1,6 @@
 package com.bezkoder.spring.jwt.mongodb.models;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -44,7 +45,7 @@ public class User {
   private Image profile_image;
   private String verify_code;
   
-  private List<Corruption> corruptions;
+  private List<Corruption> corruptions=new ArrayList<Corruption>();
   
   public List<Corruption> getCorruptions() {
 	return corruptions;
@@ -56,6 +57,9 @@ public void setCorruptions(List<Corruption> corruptions) {
 	this.corruptions = corruptions;
 }
 
+public void addOneCorruption(Corruption corruption) {
+	this.corruptions.add(corruption);
+}
 
 
 public String getVerify_code() {

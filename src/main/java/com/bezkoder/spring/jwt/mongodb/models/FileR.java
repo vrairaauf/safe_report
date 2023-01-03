@@ -1,14 +1,19 @@
 package com.bezkoder.spring.jwt.mongodb.models;
 
+import org.bson.types.Binary;
+
 public class FileR {
-	private String path;
 	private String name;
-	private String ext;
-	public String getPath() {
-		return path;
+	private Binary document;
+	public FileR(String name) {
+		super();
+		this.name = name;
 	}
-	public void setPath(String path) {
-		this.path = path;
+	public Binary getDocument() {
+		return document;
+	}
+	public void setDocument(Binary document) {
+		this.document = document;
 	}
 	public String getName() {
 		return name;
@@ -16,10 +21,5 @@ public class FileR {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getExt() {
-		return ext;
-	}
-	public void setExt(String ext) {
-		this.ext = ext;
-	}
+	
 }

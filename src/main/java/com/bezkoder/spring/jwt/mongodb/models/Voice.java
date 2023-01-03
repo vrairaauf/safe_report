@@ -1,14 +1,16 @@
 package com.bezkoder.spring.jwt.mongodb.models;
 
+import org.bson.types.Binary;
+
 public class Voice {
-	private String path;
+	
 	private String name;
-	private String ext;
-	public String getPath() {
-		return path;
+	private Binary voice;
+	public Binary getVoice() {
+		return voice;
 	}
-	public void setPath(String path) {
-		this.path = path;
+	public void setVoice(Binary voice) {
+		this.voice = voice;
 	}
 	public String getName() {
 		return name;
@@ -16,11 +18,10 @@ public class Voice {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getExt() {
-		return ext;
+	public Voice(String name) {
+		super();
+		this.name = name;
 	}
-	public void setExt(String ext) {
-		this.ext = ext;
-	}
+	
 	
 }

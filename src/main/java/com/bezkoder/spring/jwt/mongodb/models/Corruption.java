@@ -1,5 +1,6 @@
 package com.bezkoder.spring.jwt.mongodb.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -7,8 +8,9 @@ public class Corruption {
 	private String id;
 	private Date date;
 	private String content;
-	private List<Proof> proofs;
+	private List<Proof> proofs=new ArrayList<Proof>();
 	private int truth;
+	
 	public String getId() {
 		return id;
 	}
@@ -32,6 +34,9 @@ public class Corruption {
 	}
 	public void setProofs(List<Proof> proofs) {
 		this.proofs = proofs;
+	}
+	public void addOneProof(Proof proof) {
+		this.proofs.add(proof);
 	}
 	public int getTruth() {
 		return truth;

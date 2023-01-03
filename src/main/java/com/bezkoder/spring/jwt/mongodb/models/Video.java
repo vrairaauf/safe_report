@@ -1,26 +1,28 @@
 package com.bezkoder.spring.jwt.mongodb.models;
 
+import org.bson.types.Binary;
+
 public class Video {
-	private String path;
+	
 	private String name;
-	private String ext;
-	public String getPath() {
-		return path;
-	}
-	public void setPath(String path) {
-		this.path = path;
+	private Binary video;
+	
+	public Video(String name) {
+		super();
+		this.name = name;
 	}
 	public String getName() {
 		return name;
 	}
+	public Binary getVideo() {
+		return video;
+	}
+	public void setVideo(Binary video) {
+		this.video = video;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getExt() {
-		return ext;
-	}
-	public void setExt(String ext) {
-		this.ext = ext;
-	}
+	
 	
 }
